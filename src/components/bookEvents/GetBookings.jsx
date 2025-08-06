@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-export default function GetEvent() {
+export default function GetBookings() {
   const [bookings, setBookings] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ export default function GetEvent() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="/event-register">Register for Event</Nav.Link>
-            <Nav.Link href="">Booking Details</Nav.Link>
+            <Nav.Link href="/">Booking Details</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
