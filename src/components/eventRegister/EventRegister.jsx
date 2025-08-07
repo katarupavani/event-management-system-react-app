@@ -108,4 +108,8 @@ export default function EventRegister() {
       </Container>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cd4033f2b8348d954ddfb0dea896a2a0af570e5d
