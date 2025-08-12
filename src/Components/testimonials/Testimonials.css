@@ -1,0 +1,158 @@
+/* Testimonials.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section title */
+h2.text-success {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #2e7d32;
+  text-shadow: 0 0 10px #81c784;
+}
+
+/* Error alert styling */
+.alert-danger {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+  color: #721c24 !important;
+}
+
+/* Testimonial card */
+.card {
+  border-radius: 15px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffffcc; /* Slight transparency */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(46, 125, 50, 0.5);
+  cursor: pointer;
+}
+
+/* User icon */
+.fas.fa-user {
+  color: #388e3c;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+}
+
+/* User name */
+.card-body h5.text-primary {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+  color: #2e7d32 !important;
+  text-transform: capitalize;
+}
+
+/* Designation */
+.card-body p.text-muted {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 3px;
+  color: #666 !important;
+}
+
+/* Testimonial box */
+.testimonial-box {
+  position: relative;
+  background: #f0f9f0;
+  border-radius: 15px;
+  padding: 25px 25px 25px 50px;
+  font-style: italic;
+  color: #444;
+  font-size: 1rem;
+  box-shadow: inset 4px 4px 12px #d0e6d0;
+  line-height: 1.5;
+}
+
+/* Quote icon inside testimonial box */
+.testimonial-box i.fa-quote-left {
+  color: #a5d6a7;
+  opacity: 0.4;
+}
+
+/* Event name subtitle */
+.card-subtitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4caf50 !important;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Star rating */
+.fa-star {
+  font-size: 1.3rem;
+  margin-right: 6px;
+  transition: color 0.3s ease;
+}
+
+.fa-star.fas.text-warning {
+  color: #ffca28;
+  text-shadow: 0 0 5px #ffd54f;
+}
+
+.fa-star.far.text-muted {
+  color: #c8c8c8;
+}
+
+/* Slick dots style */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #2e7d32;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #388e3c;
+  opacity: 1;
+}
+
+/* Slick arrows */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px;
+  color: #2e7d32;
+  opacity: 0.75;
+  transition: color 0.3s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #66bb6a;
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card {
+    min-height: auto;
+  }
+
+  .testimonial-box {
+    padding-left: 35px;
+    font-size: 0.95rem;
+  }
+
+  .fa-star {
+    font-size: 1.1rem;
+  }
+}

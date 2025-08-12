@@ -1,0 +1,26 @@
+.custom-event-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.custom-event-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.12),
+    0 6px 6px rgba(0, 0, 0, 0.08);
+}
+
+.custom-event-card p {
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 575px) {
+  .custom-event-card {
+    border-radius: 12px;
+  }
+}

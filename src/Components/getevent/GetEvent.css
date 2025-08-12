@@ -1,0 +1,34 @@
+/* GetEvent.css */
+
+body {
+  background-color: #f0f4ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+}
+
+.card-subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6c757d !important;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+button.btn-sm {
+  padding: 0.3rem 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 0 10px;
+  }
+}
