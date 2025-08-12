@@ -44,47 +44,110 @@ export default function UpdateEvent() {
       }).catch(() => setError("Server error"));
   };
 
-  return (
-    <Container className="mt-5">
-      <h2 className="text-center mb-4">Update Event</h2>
-      {error && <Alert variant="danger">{error}</Alert>}
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3">
-          <Form.Label>Event Name</Form.Label>
-          <Form.Control type="text" name="eventName" value={eventData.eventName} onChange={handleChange} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Category</Form.Label>
-          <Form.Control type="text" name="category" value={eventData.category} onChange={handleChange} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Description</Form.Label>
-          <Form.Control type="text" name="description" value={eventData.description} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Location</Form.Label>
-          <Form.Control type="text" name="location" value={eventData.location} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Date</Form.Label>
-          <Form.Control type="date" name="date" value={eventData.date} onChange={handleChange} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Start Time</Form.Label>
-          <Form.Control type="time" name="startTime" value={eventData.startTime} onChange={handleChange} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>End Time</Form.Label>
-          <Form.Control type="time" name="endTime" value={eventData.endTime} onChange={handleChange} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Limit</Form.Label>
-          <Form.Control type="number" name="limit" value={eventData.limit} onChange={handleChange} required />
-        </Form.Group>
-        <div className="text-center">
-          <Button variant="primary" type="submit">Update</Button>
-        </div>
-      </Form>
-    </Container>
-  );
+ return (
+  <Container className="mt-5">
+    <h2 className="text-center mb-4">Update Event</h2>
+    {error && <Alert variant="danger">{error}</Alert>}
+    <Form onSubmit={handleSubmit}>
+      <Form.Group className="mb-3">
+        <Form.Label>Event Name</Form.Label>
+        <Form.Control
+          type="text"
+          name="eventName"
+          value={eventData.eventName}
+          onChange={handleChange}
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Category</Form.Label>
+        <Form.Control
+          as="select"
+          name="category"
+          value={eventData.category}
+          onChange={handleChange}
+          required
+        >
+          <option value="">-- Select Category --</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Science Conference">Science Conference</option>
+          <option value="Haldi">Haldi</option>
+        </Form.Control>
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          type="text"
+          name="description"
+          value={eventData.description}
+          onChange={handleChange}
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Location</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={eventData.location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Date</Form.Label>
+        <Form.Control
+          type="date"
+          name="date"
+          value={eventData.date}
+          onChange={handleChange}
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Start Time</Form.Label>
+        <Form.Control
+          type="time"
+          name="startTime"
+          value={eventData.startTime}
+          onChange={handleChange}
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>End Time</Form.Label>
+        <Form.Control
+          type="time"
+          name="endTime"
+          value={eventData.endTime}
+          onChange={handleChange}
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Limit</Form.Label>
+        <Form.Control
+          type="number"
+          name="limit"
+          value={eventData.limit}
+          onChange={handleChange}
+          required
+        />
+      </Form.Group>
+
+      <div className="text-center">
+        <Button variant="primary" type="submit">
+          Update
+        </Button>
+      </div>
+    </Form>
+  </Container>
+);
+
 }

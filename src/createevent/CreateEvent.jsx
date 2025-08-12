@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Form, Button, Alert, Card } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
+import './CreateEvent.css';
 export default function CreateEvent() {
   const [event, setEvent] = useState({
     eventName: '',
@@ -53,6 +54,20 @@ export default function CreateEvent() {
   };
 
   return (
+<>
+     {/* Navbar */}
+         <nav className="navbar">
+            <Link to="/" className="logo-link">
+              <h2 className="logo" href="/"> Event Management System</h2>
+            </Link>
+            <div className="nav-links">
+              <Link to="/createevent">Create Event</Link>
+              <Link to="/getevent">All Events</Link>
+              <Link to="/searchevent">Search</Link>
+              <Link to="/upcomingevent">Upcoming Events</Link>
+            </div>
+          </nav>
+   
     <Container className="mt-5">
       <Row className="justify-content-center">
         <Col xs={12} md={8} lg={6}>
@@ -84,10 +99,10 @@ export default function CreateEvent() {
                     required
                   >
                     <option value="">-- Select Category --</option>
-                    <option value="wedding">Wedding</option>
-                    <option value="birthday">Birthday</option>
-                    <option value="scienceconference">Science Conference</option>
-                    <option value="haldi">Haldi</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Science Conference">Science Conference</option>
+                    <option value="Haldi">Haldi</option>
                   </Form.Control>
                 </Form.Group>
 
@@ -165,5 +180,6 @@ export default function CreateEvent() {
         </Col>
       </Row>
     </Container>
+    </>
   );
 }

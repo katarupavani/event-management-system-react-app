@@ -1,0 +1,150 @@
+/* Background */
+body {
+  background: linear-gradient(135deg, #eef9ff, #dff6f9);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1a1a1a, #292929);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  color: #00eaff;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00eaff;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Container Title */
+.container h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Event Cards Grid - 3 per row */
+.event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.event-grid .card {
+  flex: 0 0 calc(33.333% - 20px); /* 3 per row */
+  max-width: 260px; /* prevent too wide */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .event-grid .card {
+    flex: 0 0 calc(50% - 20px); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .event-grid .card {
+    flex: 0 0 100%; /* 1 per row */
+  }
+}
+
+/* Event Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 25px rgba(0, 192, 214, 0.2);
+}
+
+/* Event Title */
+.card h5 {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Event Info */
+.card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Date Badge */
+.card::before {
+  content: attr(data-date);
+  position: absolute;
+  top: 15px;
+  right: -50px;
+  background: #00c0d6;
+  color: white;
+  padding: 6px 60px;
+  transform: rotate(45deg);
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 192, 214, 0.4);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+}
+
+/* No Events Message */
+.no-events {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 30px;
+}

@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { Card, Container, Row, Col, Alert, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function GetEvent() {
   const [events, setEvents] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
-  const navigate = useNavigate(); // for update navigation
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     getEvents();
@@ -44,6 +45,19 @@ export default function GetEvent() {
   };
 
   return (
+    <>
+    {/* Navbar */}
+        <nav className="navbar">
+           <Link to="/" className="logo-link">
+             <h2 className="logo" href="/"> Event Management System</h2>
+           </Link>
+           <div className="nav-links">
+             <Link to="/createevent">Create Event</Link>
+             <Link to="/getevent">All Events</Link>
+             <Link to="/searchevent">Search</Link>
+             <Link to="/upcomingevent">Upcoming Events</Link>
+           </div>
+         </nav>
     <Container className="mt-5">
       <h2 className="text-center mb-4">Event List</h2>
 
@@ -77,6 +91,7 @@ export default function GetEvent() {
         ))}
       </Row>
     </Container>
+     </>
   );
 }
 

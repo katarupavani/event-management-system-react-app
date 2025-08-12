@@ -1,0 +1,115 @@
+/* Background */
+body {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  min-height: 100vh;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar - same style as other pages */
+.navbar {
+  background: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #00eaff;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00eaff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Page Container */
+.container {
+  margin-top: 40px;
+}
+
+/* Search Select */
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #00c0d6;
+  box-shadow: 0 0 6px rgba(0, 192, 214, 0.4);
+}
+
+/* Event Cards */
+.card {
+  background: #fffafa;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 192, 214, 0.2);
+}
+
+.card h5 {
+  font-weight: 700;
+  color: #333;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Category Title */
+h4 {
+  margin-top: 30px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  padding: 10px 15px;
+}

@@ -1,0 +1,142 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  min-height: 100vh;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #00eaff;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00eaff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Page Container */
+.mt-5 {
+  margin-top: 60px !important;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border: none !important;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Card Title */
+.card h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Form Controls */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #00c0d6;
+  box-shadow: 0 0 6px rgba(0, 192, 214, 0.4);
+}
+
+/* Button Styling */
+.btn-primary {
+  background: #00c0d6;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0098a8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 192, 214, 0.3);
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
