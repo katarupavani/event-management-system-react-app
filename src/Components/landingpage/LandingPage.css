@@ -1,0 +1,87 @@
+.page-wrapper {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #1a1a1a;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2d68e6, #1a4fb8);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-buttons {
+  margin-top: 30px;
+}
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  margin: 10px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1a4fb8;
+}
+.feature-box {
+  text-align: center;
+  padding: 30px;
+}
+.feature-icon {
+  font-size: 40px;
+  color: #2d68e6;
+  margin-bottom: 15px;
+}
+.feature-box h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.feature-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a4fb8;
+  color: #dbe9ff;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+.footer-links {
+  text-align: right;
+}
+.footer-link {
+  margin-left: 15px;
+  color: #ffdd57;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

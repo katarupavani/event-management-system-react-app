@@ -1,0 +1,48 @@
+/* Bookingdetails.css */
+
+body {
+  background-color: #f5f8fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  letter-spacing: 1.2px;
+}
+
+.table-primary {
+  background-color: #cfe2ff !important;
+  color: #084298;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e9f0ff;
+}
+
+.card {
+  border-radius: 12px;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 28px rgba(13, 110, 253, 0.2);
+}
+
+.navbar-text {
+  letter-spacing: 0.8px;
+}
+
+.alert {
+  font-size: 1.1rem;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 0 10px;
+  }
+}

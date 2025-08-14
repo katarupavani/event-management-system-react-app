@@ -1,0 +1,39 @@
+/* Register.css */
+
+.register-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d68e6, #1a4fb8);
+  padding: 40px 20px;
+}
+
+.register-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.register-card .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.register-card .form-control,
+.register-card .form-select {
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.register-card .btn-primary {
+  background-color: #2d68e6;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.register-card .btn-primary:hover {
+  background-color: #1a4fb8;
+}
+
+.register-card p {
+  font-size: 0.9rem;
+}
