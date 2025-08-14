@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import feedbackBanner from '../assets/feedback-1.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 
 const FeedbackForm = () => {
   const [feedback, setFeedback] = useState({
@@ -13,22 +14,15 @@ const FeedbackForm = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Fetch events from backend
-    fetch('http://localhost:8080/api/events')
+  axios.get('/api/events')
       .then(res => {
-        if (!res.ok) throw new Error(`Server error: ${res.status}`);
-        return res.json();
+        console.log("Events API Response:", res.data);
+        const eventList = res.data.data || [];
+        setEvents(Array.isArray(eventList) ? eventList : []);
       })
-      .then(data => {
-        // Assuming ResponseData format: { status, message, data: [ { eventId, eventName }, ... ] }
-        const list = data.data ?? [];
-        setEvents(list);
-      })
-      .catch(err => {
-        console.error('Error fetching events:', err);
-        setMessage('Failed to load events.');
-      });
-  }, []);
+      .catch(err => console.error('Error fetching events:', err));
+
+}, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,8 +36,8 @@ const FeedbackForm = () => {
       return;
     }
 const payload = {
-  userName: feedback.username,   // frontend sends userName (string)
-  eventid: parseInt(feedback.eventId), // event id (int)
+  userName: feedback.username,  
+  eventid: parseInt(feedback.eventId), 
   rating: parseInt(feedback.rating),
   comment: feedback.comment
 };
