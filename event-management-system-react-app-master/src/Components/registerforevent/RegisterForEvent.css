@@ -1,0 +1,47 @@
+/* RegisterForEvent.css */
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-card {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #d9e8ff);
+  transition: box-shadow 0.3s ease;
+}
+
+.register-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.35);
+}
+
+.btn-register {
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #004db3;
+  box-shadow: 0 8px 25px rgba(0, 77, 179, 0.6);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-control[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.navbar-text {
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 576px) {
+  .register-card {
+    padding: 2rem 1.5rem;
+  }
+}
