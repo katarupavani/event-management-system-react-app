@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: event-management-system-dep
+spec:
+  selector:
+    matchLabels:
+      app: event-management-system
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: event-management-system
+    spec:
+      containers:
+        - name: event-management-system
+          image: yesubauboyena/event-management-system:latest # Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080 # The port that the container is running on in the cluster
